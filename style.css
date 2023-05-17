@@ -1,0 +1,496 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #f7f6f5;
+    color: #383e45;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+span {
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: solid 1px #383e45;
+}
+
+header ul {
+    display: flex;
+    padding: 10px auto;
+}
+
+header li {
+    margin-right: 35px;
+}
+
+header li a {
+    color: #24292e;
+    font-size: 17px;
+    position: relative;
+}
+header img {
+    height: 70px;
+    margin-left: 30px;
+}
+
+header li a:hover,
+.other {
+    opacity: 0.7;
+}
+
+main h1 {
+    font-family: 'Cherry Swash', cursive;
+    font-size: 40px;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+}
+
+footer #button {
+    display: block;
+    text-align: right;
+}
+
+/*========== class ==========*/
+.background {
+    background-image: url(img/main.gif);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #f7f6f5;
+}
+
+.home {
+    color: #f7f6f5;
+}
+
+.main-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.title {
+    padding-top: 30px;
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: solid 3px #383e45;
+    font-family: comic;
+}
+
+.icon img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.icon-skill img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.sns {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+    align-items: center;
+}
+
+.sns img {
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: block;
+}
+
+.text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.inquiry {
+    display: inline-block;
+    padding: 40px 40px 40px 40px;
+    background-color: #efe8dd;
+    border-radius: 20px;
+    margin-right: 120px;
+}
+
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.fadeUpTrigger {
+    opacity: 0;
+}
+
+.gallery {
+    columns: 3;
+    /*段組みの数*/
+    padding: 0 20px;
+    /*ギャラリー左右に余白をつける*/
+    margin: 0;
+}
+
+.gallery li {
+    margin-bottom: 20px;
+    /*各画像下に余白をつける*/
+    list-style: none;
+}
+
+/*ギャラリー内のイメージは横幅100%にする*/
+.gallery img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    /*画像の下にできる余白を削除*/
+}
+
+/*========== id ==========*/
+#home {
+    border-bottom: none;
+}
+
+#home li a {
+    color: #f7f6f5;
+}
+
+#home .openbtn span {
+    background-color: #f7f6f5;
+}
+
+#profile,
+#skill,
+#contact {
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+#profile p {
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-left: 80px;
+    margin-right: 20px;
+}
+
+#profile .content {
+    padding-top: 20px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile .content p {
+    display: inline-block;
+    padding: 65px 20px 65px 20px;
+    background-color: #efe8dd;
+    border-radius: 20px;
+}
+
+#profile .tool p {
+    margin-right: 50px;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 40px 140px 40px 140px;
+    background-color: #efe8dd;
+    border-radius: 20px;
+}
+
+#skill p {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#skill ul {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-left: 0px;
+}
+
+#skill li {
+    margin: 0px 50px;
+}
+
+#skill .content {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#contact .important {
+    color: #ea5532;
+}
+
+#contact .content {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#button {
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+#illust,
+#anime {
+    text-align: center;
+}
+
+/* ========== responsive ========== */
+@media screen and (max-width: 920px) {
+    #profile .content {
+        display: flex;
+        flex-flow: column;
+        margin: auto auto;
+    }
+
+    #profile p {
+        margin: 10px 10px;
+    }
+
+    #profile .tool p {
+        margin: 10px 10px;
+        padding: 40px 130px 40px 130px;
+    }
+
+    #skill .content {
+        display: flex;
+        flex-flow: column;
+        margin: auto auto;
+    }
+
+    #skill ul {
+        display: flex;
+        flex-flow: column;
+    }
+
+    #skill li {
+        margin-bottom: 40px;
+    }
+
+    #contact p {
+        margin: 10px 10px;
+    }
+
+    #contact .content {
+        padding-top: 20px;
+        display: flex;
+        flex-flow: column;
+        margin: auto auto;
+    }
+
+    .gallery {
+        columns: 2;
+    }
+
+
+    #nav {
+        position: fixed;
+        z-index: -1;
+        opacity: 0;
+        /*はじめは透過0*/
+        /*ナビの位置と形状*/
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        /*ナビの高さ*/
+        background: #f7f6f5;
+        /*動き*/
+        transition: all 0.3s;
+    }
+
+    #nav.panelactive {
+        opacity: 1;
+        z-index: 999;
+    }
+
+    #nav.panelactive {
+        /*ナビの数が増えた場合縦スクロール*/
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        /*表示する高さ*/
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #nav ul {
+        display: none;
+        /*ナビゲーション天地中央揃え*/
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #nav.panelactive ul {
+        display: block;
+    }
+
+    #nav li {
+        list-style: none;
+        text-align: center;
+    }
+
+    #nav li a {
+        color: #383e45;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+    }
+
+    /*========= ボタンのためのCSS ===============*/
+    .openbtn {
+        position: sticky;
+        z-index: 9999;
+        /*ボタンを最前面に*/
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+
+    /*×に変化*/
+    .openbtn span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #383e45;
+        width: 45%;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 15px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 23px;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 31px;
+    }
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
