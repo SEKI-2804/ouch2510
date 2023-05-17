@@ -321,7 +321,7 @@ footer #button {
 }
 
 /* ========== responsive ========== */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 920px) {
     #profile .content {
         display: flex;
         flex-flow: column;
@@ -334,7 +334,7 @@ footer #button {
 
     #profile .tool p {
         margin: 10px 10px;
-        padding: 40px 130px 40px 130px;
+        padding: 40px 100px 40px 100px;
     }
 
     #skill .content {
