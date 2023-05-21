@@ -351,6 +351,10 @@ footer #button {
     #skill li {
         margin-bottom: 40px;
     }
+    
+    .icon img {
+        margin-left: 0px;
+}
 
     #contact p {
         margin: 10px 10px;
