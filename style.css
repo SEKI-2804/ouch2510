@@ -178,11 +178,15 @@ footer #button {
 }
 
 .inquiry {
+    text-align: center;
     display: inline-block;
     padding: 40px 80px 40px 80px;
     background-color: #efe8dd;
     border-radius: 20px;
     margin-right: 100px;
+}
+.inquiry p {
+    text-align: left;
 }
 
 .fadeUp {
