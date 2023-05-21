@@ -366,6 +366,11 @@ footer #button {
         flex-flow: column;
         margin: auto auto;
     }
+    
+    .inquiry {
+        margin:  20px 75px 20px 75px;
+        padding: 40px 20px 40px 20px;
+    }
 
     .gallery {
         columns: 2;
