@@ -496,7 +496,7 @@ footer #button {
 
     #skill li {
         margin-bottom: 40px;
-        margin: 0;
+        margin: 0 0 40px;
     }
 
     .icon img {
