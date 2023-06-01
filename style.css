@@ -496,6 +496,7 @@ footer #button {
 
     #skill li {
         margin-bottom: 40px;
+        margin: 0;
     }
 
     .icon img {
@@ -503,7 +504,7 @@ footer #button {
     }
 
     .tool li {
-        margin: 20px;
+        margin: 5px;
     }
 
     #contact p {
